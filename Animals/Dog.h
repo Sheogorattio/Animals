@@ -2,11 +2,12 @@
 #include "Animal.h"
 class Dog : public Animal
 {
+	string name;
 	string breed;
 public:
 	Dog() = default;
-	Dog(string K, string Ph, string C, string O, string F, string G, string S, string br);
-	void Print();
+	Dog(const char* n, const char* br);
+	void Print()const;
 	void Input();
 };
 

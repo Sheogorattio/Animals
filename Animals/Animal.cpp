@@ -1,6 +1,6 @@
 #include "Animal.h"
 
-Animal::Animal(string K, string Ph, string C, string O, string F, string G, string S)
+Animal::Animal(const char* K, const char* Ph, const char* C, const char* O, const char* F, const char* G, const char* S, const char* N)
 {
 	Kingdom = K;
 	Phylum = Ph;
@@ -9,9 +9,10 @@ Animal::Animal(string K, string Ph, string C, string O, string F, string G, stri
 	Family = F;
 	Genus = G;
 	Species = S;
+	Name = N;
 }
 
-void Animal::Print()
+void Animal::Print()const
 {
 	cout << "Kingdom:\t" << Kingdom << endl;
 	cout << "Phylum:\t" << Phylum << endl;
@@ -20,6 +21,7 @@ void Animal::Print()
 	cout << "Family:\t" << Family << endl;
 	cout << "Genus:\t" << Genus << endl;
 	cout << "Species:\t" << Species << endl;
+	cout << "Personal name:\t" << Name << endl;
 }
 
 void Animal::Input()
@@ -38,4 +40,25 @@ void Animal::Input()
 	cin >> Genus;
 	cout << "enter Species:";
 	cin >> Species;
+}
+
+Animal::operator string()
+{
+	return Name;
+}
+
+string Animal::getName()const
+{
+	return Name;
+}
+
+void Animal::setName(const char* n)
+{
+	Name = n;
+}
+
+ostream& operator<<(ostream& os, const Animal& obj)
+{
+	obj.Print();
+	return os;
 }

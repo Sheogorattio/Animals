@@ -1,11 +1,11 @@
 #include "Dog.h"
-
-Dog::Dog(string K, string Ph, string C, string O, string F, string G, string S, string br):Animal(K, Ph, C, O, F, G, S)
+//(K, Ph, C, O, F, G, S)
+Dog::Dog(const char* n, const char* br):Animal("Animalia", " Chordata" , "Mammalia", "Carnivora", "Canidae", "Canis Linnaesus", "Canis lupus Linnaesus", n)
 {
 	breed = br;
 }
 
-void Dog::Print()
+void Dog::Print()const
 {
 	Animal::Print();
 	cout << "Breed:\t" << breed << endl;

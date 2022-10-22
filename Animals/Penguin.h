@@ -5,8 +5,8 @@ class Penguin:public Animal
 	double fish_weight;
 public:
 	Penguin() = default;
-	Penguin(string K, string Ph, string C, string O, string F, string G, string S, double w);
-	void Print();
+	Penguin(const char* n, double w);
+	void Print()const;
 	void Input();
 };
 

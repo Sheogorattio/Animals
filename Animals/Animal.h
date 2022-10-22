@@ -12,10 +12,15 @@ protected:
 	string Family;
 	string Genus;
 	string Species;
+	string Name;
 public:
 	Animal() = default;
-	Animal(string K, string Ph, string C, string O, string F, string G, string S);
-	void Print();
+	Animal(const char* K, const char* Ph, const char* C, const char* O, const char* F, const char* G, const char* S , const char* N);
+	virtual void Print()const ;
 	void Input();
+	operator string();
+	string getName()const;
+	friend ostream& operator<<(ostream& os, const Animal& obj);
+	void setName(const char* n);
 };
 

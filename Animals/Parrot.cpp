@@ -1,11 +1,11 @@
 #include "Parrot.h"
-
-Parrot::Parrot(string K, string Ph, string C, string O, string F, string G, string S, int w):Animal( K, Ph, C, O, F, G, S)
+//( K, Ph, C, O, F, G, S)
+Parrot::Parrot(const char* n, int w) :Animal("Animalia", "Chordata", "Aves", "Psittaciformers", "Psittacidae", "Psittacus Linnaeus", "Psittacus erithacus Linnaeus", n)
 {
 	word_count = w;
 }
 
-void Parrot::Print()
+void Parrot::Print()const
 {
 	Animal::Print();
 	cout << "Number of words wich parrot is familiar with:\t" << word_count << endl;

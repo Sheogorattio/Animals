@@ -138,6 +138,7 @@
     <ClInclude Include="Animal.h" />
     <ClInclude Include="Dog.h" />
     <ClInclude Include="Elephant.h" />
+    <ClInclude Include="functions.h" />
     <ClInclude Include="Parrot.h" />
     <ClInclude Include="Penguin.h" />
   </ItemGroup>
